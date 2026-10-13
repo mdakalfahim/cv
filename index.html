@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -6,723 +5,334 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdul Kadir Al Fahim - Security & Loss Prevention Professional</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            50: '#f0f7ff',
-                            100: '#e0effe',
-                            500: '#0284c7',
-                            600: '#0284c7',
-                            700: '#0369a1',
-                            800: '#075985',
-                            900: '#0c4a6e',
-                        },
-                        navy: {
-                            800: '#0b1329',
-                            900: '#060b19',
-                            950: '#03060f',
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
     <style>
+        * {
+            font-family: "Times New Roman", Times, serif !important;
+        }
         body {
-            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.015em;
         }
-        .glow-effect {
-            box-shadow: 0 0 25px -5px rgba(2, 132, 199, 0.3);
-        }
-        .glow-effect:hover {
-            box-shadow: 0 0 35px 0px rgba(2, 132, 199, 0.5);
-        }
-        .card-blur {
-            backdrop-filter: blur(12px);
-            background: rgba(15, 23, 42, 0.75);
-        }
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #060b19;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #1e293b;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #0284c7;
+        @media print {
+            @page {
+                size: A4;
+                margin: 10mm;
+            }
+            .no-print {
+                display: none !important;
+            }
+            body {
+                background-color: white !important;
+                color: #0f172a !important;
+            }
+            main {
+                margin-left: 0 !important;
+                padding: 0 !important;
+                max-width: 100% !important;
+            }
+            .card-premium {
+                box-shadow: none !important;
+                border: 1px solid #e2e8f0 !important;
+                border-radius: 1rem !important;
+                padding: 1.25rem !important;
+                margin-bottom: 1.25rem !important;
+                page-break-inside: avoid;
+            }
+            .print-grid {
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
+                gap: 1.25rem !important;
+            }
         }
     </style>
 </head>
-<body class="bg-navy-900 text-slate-200 antialiased selection:bg-brand-500 selection:text-white min-h-screen flex flex-col justify-between">
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-blue-600 selection:text-white leading-relaxed">
 
-    <!-- Navigation -->
-    <header class="sticky top-0 z-50 border-b border-slate-800/80 card-blur transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <!-- Logo / Name Badge -->
-                <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 rounded-lg bg-gradient-to-tr from-brand-600 to-cyan-400 flex items-center justify-center font-bold text-white shadow-lg shadow-brand-500/20">
-                        AF
-                    </div>
-                    <div>
-                        <a href="#top" class="text-lg font-bold text-white tracking-tight hover:text-brand-500 transition">Abdul Kadir Al Fahim</a>
-                        <p class="text-xs text-brand-500 font-medium">SOC & Security Specialist</p>
-                    </div>
+    <!-- Sidebar Navigation Desktop / Header Bar Mobile -->
+    <aside class="no-print fixed top-0 left-0 h-full w-72 bg-slate-900 text-white shadow-2xl z-50 hidden lg:flex flex-col justify-between p-8 border-r border-slate-800">
+        <div>
+            <!-- Sidebar Profile Heading -->
+            <div class="flex items-center gap-4 border-b border-slate-800 pb-6 mb-8">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-600 to-sky-400 text-white flex items-center justify-center font-bold text-xl shadow-lg ring-4 ring-blue-500/20">
+                    AK
                 </div>
-
-                <!-- Desktop Navigation Links -->
-                <nav class="hidden md:flex space-x-1 lg:space-x-2">
-                    <a href="#about" class="px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition">About</a>
-                    <a href="#experience" class="px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Experience</a>
-                    <a href="#skills" class="px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Skills</a>
-                    <a href="#certifications" class="px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Certifications</a>
-                    <a href="#contact" class="px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Contact</a>
-                </nav>
-
-                <!-- Action Button -->
-                <div class="hidden sm:flex items-center space-x-3">
-                    <a href="mailto:mdabdulkadiralfahim@gmail.com" class="px-4 py-2 text-sm font-semibold rounded-lg bg-brand-600 hover:bg-brand-500 text-white shadow-md shadow-brand-600/30 transition duration-200 flex items-center space-x-2">
-                        <i class="fa-solid me-1 fa-envelope"></i>
-                        <span>Get In Touch</span>
-                    </a>
-                </div>
-
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" type="button" class="text-slate-400 hover:text-white hover:bg-slate-800 p-2 rounded-lg transition" aria-label="Toggle menu">
-                        <i class="fa-solid fa-bars text-xl"></i>
-                    </button>
+                <div>
+                    <h2 class="font-bold text-sm tracking-wider text-white">ABDUL KADIR</h2>
+                    <p class="text-xs text-blue-400 font-medium mt-0.5">SOC & Security Specialist</p>
                 </div>
             </div>
-        </div>
 
-        <!-- Mobile Navigation Menu -->
-        <div id="mobile-menu" class="hidden md:hidden border-b border-slate-800 bg-navy-950 px-4 pt-2 pb-4 space-y-1">
-            <a href="#about" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">About</a>
-            <a href="#experience" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Experience</a>
-            <a href="#skills" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Skills</a>
-            <a href="#certifications" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Certifications</a>
-            <a href="#contact" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Contact</a>
-            <div class="pt-2">
-                <a href="mailto:mdabdulkadiralfahim@gmail.com" class="w-full text-center block px-4 py-2.5 text-sm font-semibold rounded-lg bg-brand-600 hover:bg-brand-500 text-white shadow-md">
-                    Contact Direct
+            <!-- Navigation Links -->
+            <nav class="space-y-3 text-xs font-semibold text-slate-300">
+                <a href="#cover-letter" class="flex items-center gap-3.5 px-4 py-3 rounded-xl hover:bg-slate-800/80 hover:text-blue-400 transition duration-200 group">
+                    <i class="fa-solid fa-file-lines w-4 text-blue-500 group-hover:scale-110 transition"></i> Cover Letter
                 </a>
-            </div>
+                <a href="#about" class="flex items-center gap-3.5 px-4 py-3 rounded-xl hover:bg-slate-800/80 hover:text-blue-400 transition duration-200 group">
+                    <i class="fa-solid fa-user-shield w-4 text-blue-500 group-hover:scale-110 transition"></i> Professional Summary
+                </a>
+                <a href="#experience" class="flex items-center gap-3.5 px-4 py-3 rounded-xl hover:bg-slate-800/80 hover:text-blue-400 transition duration-200 group">
+                    <i class="fa-solid fa-briefcase w-4 text-blue-500 group-hover:scale-110 transition"></i> Work Experience
+                </a>
+                <a href="#skills" class="flex items-center gap-3.5 px-4 py-3 rounded-xl hover:bg-slate-800/80 hover:text-blue-400 transition duration-200 group">
+                    <i class="fa-solid fa-sliders w-4 text-blue-500 group-hover:scale-110 transition"></i> Skills & Strengths
+                </a>
+                <a href="#credentials" class="flex items-center gap-3.5 px-4 py-3 rounded-xl hover:bg-slate-800/80 hover:text-blue-400 transition duration-200 group">
+                    <i class="fa-solid fa-graduation-cap w-4 text-blue-500 group-hover:scale-110 transition"></i> Education & Training
+                </a>
+                <a href="#personal-info" class="flex items-center gap-3.5 px-4 py-3 rounded-xl hover:bg-slate-800/80 hover:text-blue-400 transition duration-200 group">
+                    <i class="fa-solid fa-address-card w-4 text-blue-500 group-hover:scale-110 transition"></i> Personal Information
+                </a>
+            </nav>
         </div>
+
+        <!-- Sidebar Print Button -->
+        <div class="border-t border-slate-800/80 pt-6">
+            <button onclick="window.print()" class="w-full text-xs font-bold bg-blue-600 hover:bg-blue-500 text-white py-3 px-4 rounded-xl transition duration-200 flex items-center justify-center gap-2.5 shadow-lg shadow-blue-600/30">
+                <i class="fa-solid fa-print"></i> Print CV / Save PDF
+            </button>
+        </div>
+    </aside>
+
+    <!-- Mobile Top Header Bar -->
+    <header class="no-print lg:hidden fixed top-0 left-0 right-0 z-50 bg-slate-900 text-white px-4 py-3.5 flex items-center justify-between shadow-lg">
+        <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold text-sm">AK</div>
+            <span class="font-bold text-xs tracking-wider">ABDUL KADIR AL FAHIM</span>
+        </div>
+        <button onclick="window.print()" class="text-xs font-bold bg-blue-600 text-white px-3.5 py-2 rounded-xl flex items-center gap-1.5 shadow-md">
+            <i class="fa-solid fa-print"></i> Print
+        </button>
     </header>
 
-    <!-- MAIN CONTENT -->
-    <main class="flex-grow">
-        <!-- Hero Section -->
-        <section id="top" class="relative py-16 lg:py-24 overflow-hidden border-b border-slate-800/60">
-            <!-- Background Glow Decor -->
-            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-600/10 rounded-full blur-3xl pointer-events-none"></div>
-            
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    
-                    <!-- Text Content -->
-                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                        <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-slate-800/80 border border-slate-700/80 text-brand-500 text-xs sm:text-sm font-medium">
-                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                            <span>SIRA Certified Security Operator</span>
-                        </div>
-                        
-                        <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
-                            Abdul Kadir <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-cyan-400">Al Fahim</span>
-                        </h1>
-                        
-                        <p class="text-lg sm:text-xl font-medium text-slate-400">
-                            Security & Loss Prevention Professional <span class="text-brand-500 font-semibold">|</span> SOC Operator
-                        </p>
-                        
-                        <p class="text-slate-400 text-base sm:text-lg max-w-2xl leading-relaxed">
-                            Specializing in SOC operations, CCTV monitoring, access control, and incident response. Dedicated to safeguarding high-stakes enterprise facilities, data centers, and commercial assets in Dubai, UAE.
-                        </p>
+    <!-- Main Content Area -->
+    <main class="lg:ml-72 max-w-4xl mx-auto px-4 sm:px-8 lg:px-12 pt-24 lg:pt-12 pb-20 space-y-8">
 
-                        <!-- Contact Badges / Quick Links -->
-                        <div class="flex flex-wrap gap-3 justify-center lg:justify-start pt-2">
-                            <a href="tel:+971521005209" class="inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-slate-800/90 border border-slate-700/60 text-slate-300 hover:text-white hover:border-brand-500/50 transition text-sm">
-                                <i class="fa-solid fa-phone text-brand-500"></i>
-                                <span>+971 52 100 5209</span>
-                            </a>
-                            <a href="mailto:mdabdulkadiralfahim@gmail.com" class="inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-slate-800/90 border border-slate-700/60 text-slate-300 hover:text-white hover:border-brand-500/50 transition text-sm">
-                                <i class="fa-solid fa-envelope text-brand-500"></i>
-                                <span>mdabdulkadiralfahim@gmail.com</span>
-                            </a>
-                            <a href="https://linkedin.com/in/abdulkadiralfahim" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-slate-800/90 border border-slate-700/60 text-slate-300 hover:text-white hover:border-brand-500/50 transition text-sm">
-                                <i class="fa-brands fa-linkedin text-brand-500"></i>
-                                <span>LinkedIn Profile</span>
-                            </a>
-                            <span class="inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-slate-800/90 border border-slate-700/60 text-slate-300 text-sm">
-                                <i class="fa-solid fa-location-dot text-brand-500"></i>
-                                <span>Dubai, UAE</span>
-                            </span>
-                        </div>
+        <!-- Header Profile Card -->
+        <section class="bg-white border border-slate-200/80 rounded-3xl p-6 sm:p-10 shadow-xl shadow-slate-200/50 card-premium flex flex-col md:flex-row items-center gap-8 relative overflow-hidden">
+            <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-400 no-print"></div>
 
-                        <!-- CTA Buttons -->
-                        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-4">
-                            <a href="#experience" class="w-full sm:w-auto px-6 py-3 rounded-lg bg-brand-600 hover:bg-brand-500 text-white font-semibold text-center shadow-lg shadow-brand-600/30 transition duration-200">
-                                View Experience
-                            </a>
-                            <a href="#contact" class="w-full sm:w-auto px-6 py-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold text-center transition duration-200">
-                                Contact Info
-                            </a>
-                        </div>
+            <!-- Passport Size Photo Box -->
+            <div class="relative group flex-shrink-0">
+                <div class="absolute -inset-1.5 bg-gradient-to-tr from-blue-600 to-sky-400 rounded-2xl blur opacity-30 group-hover:opacity-75 transition duration-500 no-print"></div>
+                <div class="relative w-28 h-36 md:w-32 md:h-40 rounded-2xl overflow-hidden border-4 border-white bg-white shadow-xl flex items-center justify-center bg-gradient-to-b from-slate-100 to-slate-200">
+                    <img src="https://lh3.googleusercontent.com/d/1jE32AnnhNc6f3hJivF2IPg8__3gJji_X=s1000" 
+                         alt="Abdul Kadir Al Fahim" 
+                         class="w-full h-full object-cover rounded-xl shadow-inner"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="absolute inset-0 bg-slate-100 hidden flex-col items-center justify-center text-blue-800 font-bold text-xl tracking-widest rounded-lg">
+                        AK
                     </div>
+                </div>
+            </div>
 
-                    <!-- Highlight Card Sidebar -->
-                    <div class="lg:col-span-5 flex justify-center">
-                        <div class="w-full max-w-md bg-gradient-to-b from-slate-800/80 to-slate-900/90 border border-slate-700/80 rounded-2xl p-6 sm:p-8 shadow-2xl relative glow-effect transition duration-300">
-                            <!-- Header badge -->
-                            <div class="flex items-center justify-between border-b border-slate-700/80 pb-4 mb-6">
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-12 h-12 rounded-full bg-brand-500/20 text-brand-500 flex items-center justify-center text-xl">
-                                        <i class="fa-solid fa-shield-halved"></i>
-                                    </div>
-                                    <div>
-                                        <h3 class="text-white font-bold">Security Credentials</h3>
-                                        <p class="text-xs text-slate-400">Verified Professional Profile</p>
-                                    </div>
-                                </div>
-                                <span class="px-2.5 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs rounded-full font-semibold">Active</span>
-                            </div>
-
-                            <ul class="space-y-4 text-sm text-slate-300">
-                                <li class="flex items-start space-x-3">
-                                    <i class="fa-solid fa-certificate text-brand-500 mt-1"></i>
-                                    <div>
-                                        <span class="text-white font-medium block">SIRA Security System Operator</span>
-                                        <span class="text-xs text-slate-400">Valid until Feb 15, 2028</span>
-                                    </div>
-                                </li>
-                                <li class="flex items-start space-x-3">
-                                    <i class="fa-solid fa-building-shield text-brand-500 mt-1"></i>
-                                    <div>
-                                        <span class="text-white font-medium block">Current Role</span>
-                                        <span class="text-xs text-slate-400">SOC Operator - Khazna Data Center (G4S)</span>
-                                    </div>
-                                </li>
-                                <li class="flex items-start space-x-3">
-                                    <i class="fa-solid fa-id-card text-brand-500 mt-1"></i>
-                                    <div>
-                                        <span class="text-white font-medium block">UAE Driving License</span>
-                                        <span class="text-xs text-slate-400">Automatic (Lic: 4852116)</span>
-                                    </div>
-                                </li>
-                                <li class="flex items-start space-x-3">
-                                    <i class="fa-solid fa-globe text-brand-500 mt-1"></i>
-                                    <div>
-                                        <span class="text-white font-medium block">Multilingual</span>
-                                        <span class="text-xs text-slate-400">English, Hindi/Urdu, Bengali</span>
-                                    </div>
-                                </li>
-                            </ul>
-
-                            <div class="mt-6 pt-4 border-t border-slate-700/80 flex items-center justify-between text-xs text-slate-400">
-                                <span>Visa Status: <strong class="text-slate-200 font-semibold">Employment</strong></span>
-                                <span>Nationality: <strong class="text-slate-200 font-semibold">Bangladeshi</strong></span>
-                            </div>
-                        </div>
+            <div class="text-center md:text-left flex-1 space-y-3">
+                <div>
+                    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 mb-1">
+                        Abdul Kadir Al Fahim
+                    </h1>
+                    <div class="text-xs sm:text-sm text-slate-600 font-medium flex items-center justify-center md:justify-start gap-1.5">
+                        <i class="fa-solid fa-location-dot text-blue-600"></i> Dubai, United Arab Emirates
                     </div>
+                </div>
 
+                <p class="text-sm sm:text-base text-blue-700 font-semibold">
+                    <i class="fa-solid fa-user-shield mr-1.5 text-blue-600"></i> Security & Loss Prevention Professional | SOC Operator
+                </p>
+
+                <div class="flex flex-col sm:flex-row flex-wrap justify-center md:justify-start gap-3 sm:gap-6 text-xs text-slate-600 font-medium pt-2 border-t border-slate-100">
+                    <div class="flex items-center justify-center md:justify-start gap-2">
+                        <i class="fa-solid fa-mobile-screen-button text-blue-600"></i> +971 52 100 5209
+                    </div>
+                    <div class="flex items-center justify-center md:justify-start gap-2">
+                        <i class="fa-solid fa-envelope text-blue-600"></i> mdabdulkadiralfahim@gmail.com
+                    </div>
+                    <div class="flex items-center justify-center md:justify-start gap-2">
+                        <i class="fa-brands fa-linkedin text-blue-600"></i> linkedin.com/in/abdulkadiralfahim
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="py-16 border-b border-slate-800/60 bg-navy-950/40">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="max-w-3xl mx-auto text-center mb-10">
-                    <h2 class="text-xs uppercase tracking-widest text-brand-500 font-bold mb-2">Professional Summary</h2>
-                    <p class="text-2xl sm:text-3xl font-bold text-white">Dedicated to Safeguarding Critical Operations</p>
-                </div>
+        <!-- 1. Cover Letter Section -->
+        <section id="cover-letter" class="bg-white border border-slate-200/80 rounded-3xl p-6 sm:p-8 shadow-xl shadow-slate-200/50 card-premium relative overflow-hidden">
+            <div class="absolute top-0 left-0 bottom-0 w-1.5 bg-blue-600 no-print"></div>
+            <h2 class="text-lg font-bold text-blue-900 mb-4 flex items-center gap-2.5">
+                <i class="fa-solid fa-file-lines text-blue-600"></i> Cover Letter
+            </h2>
+            <div class="text-slate-700 text-xs sm:text-sm leading-relaxed space-y-4">
+                <p><i class="fa-solid fa-user-tie text-blue-600 mr-2"></i><strong>To: Hiring Manager / Security Recruitment Team</strong></p>
+                <p><i class="fa-solid fa-pen text-blue-600 mr-2"></i>I am writing to express my strong interest in joining your organization as a Security Operations Center (SOC) Operator or Loss Prevention Professional. With extensive hands-on experience in high-security environments—including Khazna Data Center, commercial retail facilities (Al Khayyat Investments), and industrial logistics hubs (RSA-TALKE)—I bring a proven track record of maintaining high-level security standards, protecting valuable assets, and ensuring seamless incident management.</p>
+                <p><i class="fa-solid fa-desktop text-blue-600 mr-2"></i>Currently serving as a SOC Operator at Khazna Data Center through G4S, I am responsible for monitoring advanced security systems, managing access control systems, evaluating alarm signals, and directing swift incident response operations. My background encompasses comprehensive CCTV surveillance, loss prevention audits, incident reporting, and strict adherence to organizational security protocols.</p>
+                <p><i class="fa-solid fa-certificate text-blue-600 mr-2"></i>Key qualifications I offer include a SIRA Certified Security System Operator license (valid through February 2028), specialized safety training in firefighting and first aid, a valid UAE automatic driving license, and multilingual communication skills in English, Hindi/Urdu, and Bengali. I welcome the opportunity to discuss how my technical expertise and operational experience align with your security objectives.</p>
+                <p class="pt-2"><i class="fa-solid fa-signature text-blue-600 mr-2"></i>Sincerely,<br><strong>Abdul Kadir Al Fahim</strong></p>
+            </div>
+        </section>
 
-                <div class="bg-slate-800/40 border border-slate-700/60 rounded-2xl p-6 sm:p-10 shadow-xl max-w-4xl mx-auto relative">
-                    <i class="fa-solid fa-quote-left text-brand-500/20 text-5xl absolute top-6 left-6 pointer-events-none"></i>
-                    <p class="text-slate-300 text-base sm:text-lg leading-relaxed relative z-10 font-normal">
-                        Security and Loss Prevention professional with strong experience in <strong class="text-white">SOC operations, access control, alarm monitoring, incident response, and asset protection</strong>. Skilled in documentation, reporting, CCTV systems, and emergency coordination. Reliable, disciplined, and customer-focused with a proven record of maintaining secure environments and reducing operational risk across high-value data centers, warehouses, and retail setups.
+        <!-- 2. Professional Summary Section -->
+        <section id="about" class="bg-white border border-slate-200/80 rounded-3xl p-6 sm:p-8 shadow-xl shadow-slate-200/50 card-premium relative overflow-hidden">
+            <div class="absolute top-0 left-0 bottom-0 w-1.5 bg-blue-600 no-print"></div>
+            <h2 class="text-lg font-bold text-blue-900 mb-4 flex items-center gap-2.5">
+                <i class="fa-solid fa-user-shield text-blue-600"></i> Professional Summary & Career Objective
+            </h2>
+            <div class="space-y-3">
+                <p class="text-slate-700 text-xs sm:text-sm leading-relaxed">
+                    <i class="fa-solid fa-circle-info text-blue-600 mr-2"></i>Security and Loss Prevention professional with strong experience in SOC operations, access control, alarm monitoring, incident response, and asset protection. Skilled in documentation, reporting, CCTV systems, and emergency coordination. Reliable, disciplined, and customer-focused with a proven record of maintaining secure environments and reducing operational risk.
+                </p>
+            </div>
+        </section>
+
+        <!-- Work History Section -->
+        <section id="experience" class="bg-white border border-slate-200/80 rounded-3xl p-6 sm:p-8 shadow-xl shadow-slate-200/50 card-premium">
+            <h2 class="text-lg font-bold text-blue-900 mb-6 flex items-center gap-2.5">
+                <i class="fa-solid fa-briefcase text-blue-600"></i> Work Experience & Assignment History
+            </h2>
+
+            <div class="space-y-6 border-l-2 border-blue-100 pl-5 ml-2">
+                
+                <div class="relative group">
+                    <div class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-blue-600 border-2 border-white ring-4 ring-blue-50"></div>
+                    <div class="text-xs font-bold text-blue-600 tracking-wider mb-1">
+                        <i class="fa-solid fa-calendar mr-1"></i>Feb 2026 – Present | <i class="fa-solid fa-location-dot mr-1"></i>Dubai, UAE
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900">
+                        <i class="fa-solid fa-desktop text-blue-600 mr-1.5"></i>SOC Operator <span class="text-xs font-normal text-slate-500">— Khazna Data Center G4S</span>
+                    </h3>
+                    <p class="text-xs sm:text-sm text-slate-700 mt-1.5 leading-relaxed">
+                        Monitor security systems, alarms, and access control; escalate critical alerts. Coordinate incident response with on-ground teams and maintain accurate logs. Enforce data center security protocols and perform routine system checks.
                     </p>
-
-                    <!-- Key Pillars -->
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8 pt-6 border-t border-slate-700/60 text-center">
-                        <div class="p-3 rounded-xl bg-slate-800/60">
-                            <i class="fa-solid fa-shield-virus text-brand-500 text-xl mb-2"></i>
-                            <h4 class="text-white font-semibold text-sm">Risk Reduction</h4>
-                            <p class="text-xs text-slate-400 mt-1">Shrinkage control & threat prevention</p>
-                        </div>
-                        <div class="p-3 rounded-xl bg-slate-800/60">
-                            <i class="fa-solid fa-desktop text-brand-500 text-xl mb-2"></i>
-                            <h4 class="text-white font-semibold text-sm">SOC Vigilance</h4>
-                            <p class="text-xs text-slate-400 mt-1">24/7 CCTV & access monitoring</p>
-                        </div>
-                        <div class="p-3 rounded-xl bg-slate-800/60">
-                            <i class="fa-solid fa-clipboard-check text-brand-500 text-xl mb-2"></i>
-                            <h4 class="text-white font-semibold text-sm">Strict Compliance</h4>
-                            <p class="text-xs text-slate-400 mt-1">Comprehensive logs & auditing</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="py-16 lg:py-20 border-b border-slate-800/60">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h2 class="text-xs uppercase tracking-widest text-brand-500 font-bold mb-2">Career Timeline</h2>
-                    <p class="text-2xl sm:text-3xl font-bold text-white">Work History & Accomplishments</p>
                 </div>
 
-                <div class="relative max-w-4xl mx-auto">
-                    <!-- Vertical Timeline Line -->
-                    <div class="hidden sm:block absolute left-1/2 transform -translate-x-1/2 top-2 bottom-2 w-0.5 bg-slate-800"></div>
-
-                    <div class="space-y-10">
-
-                        <!-- Item 1: SOC Operator - Khazna Data Center -->
-                        <div class="relative flex flex-col sm:flex-row items-center">
-                            <div class="flex items-center justify-start w-full sm:w-1/2 sm:pr-8 mb-4 sm:mb-0 sm:text-right">
-                                <div class="w-full bg-slate-800/60 border border-slate-700/80 hover:border-brand-500/50 rounded-xl p-6 transition duration-200">
-                                    <div class="flex items-center justify-between sm:justify-end space-x-2 mb-2">
-                                        <span class="text-xs font-bold px-2.5 py-1 rounded bg-brand-500/20 text-brand-400 border border-brand-500/30">Feb 2026 - Present</span>
-                                        <span class="text-xs text-slate-400 sm:hidden">Dubai, UAE</span>
-                                    </div>
-                                    <h3 class="text-lg font-bold text-white">SOC Operator</h3>
-                                    <h4 class="text-sm font-semibold text-brand-500 mb-3">Khazna Data Center (G4S)</h4>
-                                    <ul class="text-xs sm:text-sm text-slate-300 space-y-2 text-left list-disc list-inside">
-                                        <li>Monitor security systems, alarms, and access control; escalate critical alerts instantly.</li>
-                                        <li>Coordinate incident response with on-ground teams and maintain accurate logs.</li>
-                                        <li>Enforce strict data center security protocols and perform routine system checks.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="hidden sm:flex absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-brand-600 border-4 border-navy-900 items-center justify-center text-white text-xs font-bold shadow-lg">
-                                1
-                            </div>
-                            <div class="w-full sm:w-1/2 sm:pl-8 text-left text-xs text-slate-400 hidden sm:block">
-                                <span class="bg-slate-800 px-3 py-1 rounded-full border border-slate-700"><i class="fa-solid fa-location-dot me-1 text-brand-500"></i> Dubai, UAE</span>
-                            </div>
-                        </div>
-
-                        <!-- Item 2: Loss Prevention Officer - Al Khayyat Investment -->
-                        <div class="relative flex flex-col sm:flex-row items-center">
-                            <div class="w-full sm:w-1/2 sm:pr-8 text-right text-xs text-slate-400 hidden sm:block">
-                                <span class="bg-slate-800 px-3 py-1 rounded-full border border-slate-700"><i class="fa-solid fa-location-dot me-1 text-brand-500"></i> Dubai, UAE</span>
-                            </div>
-                            <div class="hidden sm:flex absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-slate-700 border-4 border-navy-900 items-center justify-center text-white text-xs font-bold shadow-lg">
-                                2
-                            </div>
-                            <div class="flex items-center justify-start w-full sm:w-1/2 sm:pl-8">
-                                <div class="w-full bg-slate-800/60 border border-slate-700/80 hover:border-brand-500/50 rounded-xl p-6 transition duration-200">
-                                    <div class="flex items-center justify-between sm:justify-start space-x-2 mb-2">
-                                        <span class="text-xs font-bold px-2.5 py-1 rounded bg-slate-700 text-slate-300">May 2025 - Feb 2026</span>
-                                        <span class="text-xs text-slate-400 sm:hidden">Dubai, UAE</span>
-                                    </div>
-                                    <h3 class="text-lg font-bold text-white">Loss Prevention Officer</h3>
-                                    <h4 class="text-sm font-semibold text-brand-500 mb-3">Al Khayyat Investment (G4S)</h4>
-                                    <ul class="text-xs sm:text-sm text-slate-300 space-y-2 text-left list-disc list-inside">
-                                        <li>Conducted loss prevention audits and monitored high-risk areas to reduce shrinkage.</li>
-                                        <li>Investigated incidents, prepared detailed reports, and recommended corrective actions.</li>
-                                        <li>Managed access control and liaised with store management and security teams.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item 3: Loss Prevention Officer - RSA-TALKE -->
-                        <div class="relative flex flex-col sm:flex-row items-center">
-                            <div class="flex items-center justify-start w-full sm:w-1/2 sm:pr-8 mb-4 sm:mb-0 sm:text-right">
-                                <div class="w-full bg-slate-800/60 border border-slate-700/80 hover:border-brand-500/50 rounded-xl p-6 transition duration-200">
-                                    <div class="flex items-center justify-between sm:justify-end space-x-2 mb-2">
-                                        <span class="text-xs font-bold px-2.5 py-1 rounded bg-slate-700 text-slate-300">Nov 2024 - May 2025</span>
-                                        <span class="text-xs text-slate-400 sm:hidden">Dubai, UAE</span>
-                                    </div>
-                                    <h3 class="text-lg font-bold text-white">Loss Prevention Officer</h3>
-                                    <h4 class="text-sm font-semibold text-brand-500 mb-3">RSA-TALKE (G4S)</h4>
-                                    <ul class="text-xs sm:text-sm text-slate-300 space-y-2 text-left list-disc list-inside">
-                                        <li>Secured warehouse operations and verified shipment documentation and gate passes.</li>
-                                        <li>Reported safety violations and supported emergency response procedures.</li>
-                                        <li>Maintained strict control over restricted and hazardous zones.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="hidden sm:flex absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-slate-700 border-4 border-navy-900 items-center justify-center text-white text-xs font-bold shadow-lg">
-                                3
-                            </div>
-                            <div class="w-full sm:w-1/2 sm:pl-8 text-left text-xs text-slate-400 hidden sm:block">
-                                <span class="bg-slate-800 px-3 py-1 rounded-full border border-slate-700"><i class="fa-solid fa-location-dot me-1 text-brand-500"></i> Dubai, UAE</span>
-                            </div>
-                        </div>
-
-                        <!-- Item 4: Loss Prevention Officer - Nikai Electronics -->
-                        <div class="relative flex flex-col sm:flex-row items-center">
-                            <div class="w-full sm:w-1/2 sm:pr-8 text-right text-xs text-slate-400 hidden sm:block">
-                                <span class="bg-slate-800 px-3 py-1 rounded-full border border-slate-700"><i class="fa-solid fa-location-dot me-1 text-brand-500"></i> Dubai, UAE</span>
-                            </div>
-                            <div class="hidden sm:flex absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-slate-700 border-4 border-navy-900 items-center justify-center text-white text-xs font-bold shadow-lg">
-                                4
-                            </div>
-                            <div class="flex items-center justify-start w-full sm:w-1/2 sm:pl-8">
-                                <div class="w-full bg-slate-800/60 border border-slate-700/80 hover:border-brand-500/50 rounded-xl p-6 transition duration-200">
-                                    <div class="flex items-center justify-between sm:justify-start space-x-2 mb-2">
-                                        <span class="text-xs font-bold px-2.5 py-1 rounded bg-slate-700 text-slate-300">Jan 2021 - Feb 2022</span>
-                                        <span class="text-xs text-slate-400 sm:hidden">Dubai, UAE</span>
-                                    </div>
-                                    <h3 class="text-lg font-bold text-white">Loss Prevention Officer</h3>
-                                    <h4 class="text-sm font-semibold text-brand-500 mb-3">Nikai Electronics (Libra Group UAE)</h4>
-                                    <ul class="text-xs sm:text-sm text-slate-300 space-y-2 text-left list-disc list-inside">
-                                        <li>Monitored store operations to prevent theft and policy violations.</li>
-                                        <li>Prepared daily activity reports and incident logs; assisted customer service when needed.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item 5: Retail Operations -->
-                        <div class="relative flex flex-col sm:flex-row items-center">
-                            <div class="flex items-center justify-start w-full sm:w-1/2 sm:pr-8 mb-4 sm:mb-0 sm:text-right">
-                                <div class="w-full bg-slate-800/60 border border-slate-700/80 hover:border-brand-500/50 rounded-xl p-6 transition duration-200">
-                                    <div class="flex items-center justify-between sm:justify-end space-x-2 mb-2">
-                                        <span class="text-xs font-bold px-2.5 py-1 rounded bg-slate-700 text-slate-300">Feb 2019 - Feb 2021</span>
-                                        <span class="text-xs text-slate-400 sm:hidden">Bangladesh</span>
-                                    </div>
-                                    <h3 class="text-lg font-bold text-white">Retail & Store Operations</h3>
-                                    <p class="text-xs text-slate-400">Shop Manager / Assistant Manager / Brand Promoter</p>
-                                    <h4 class="text-sm font-semibold text-brand-500 mb-3">Xiaomi, Samsung, OPPO</h4>
-                                    <ul class="text-xs sm:text-sm text-slate-300 space-y-2 text-left list-disc list-inside">
-                                        <li>Supervised store operations, staff performance, and customer service standards.</li>
-                                        <li>Managed inventory, stock levels, and sales reporting to consistently meet sales targets.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="hidden sm:flex absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-slate-700 border-4 border-navy-900 items-center justify-center text-white text-xs font-bold shadow-lg">
-                                5
-                            </div>
-                            <div class="w-full sm:w-1/2 sm:pl-8 text-left text-xs text-slate-400 hidden sm:block">
-                                <span class="bg-slate-800 px-3 py-1 rounded-full border border-slate-700"><i class="fa-solid fa-location-dot me-1 text-brand-500"></i> Bangladesh</span>
-                            </div>
-                        </div>
-
+                <div class="relative group">
+                    <div class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-blue-600 border-2 border-white ring-4 ring-blue-50"></div>
+                    <div class="text-xs font-bold text-blue-600 tracking-wider mb-1">
+                        <i class="fa-solid fa-calendar mr-1"></i>May 2025 – Feb 2026 | <i class="fa-solid fa-location-dot mr-1"></i>Dubai, UAE
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="py-16 border-b border-slate-800/60 bg-navy-950/40">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <h2 class="text-xs uppercase tracking-widest text-brand-500 font-bold mb-2">Core Competencies</h2>
-                    <p class="text-2xl sm:text-3xl font-bold text-white">Skills & Technical Proficiencies</p>
+                    <h3 class="text-base font-bold text-slate-900">
+                        <i class="fa-solid fa-building-shield text-blue-600 mr-1.5"></i>Loss Prevention Officer <span class="text-xs font-normal text-slate-500">— Al Khayyat Investment G4S</span>
+                    </h3>
+                    <p class="text-xs sm:text-sm text-slate-700 mt-1.5 leading-relaxed">
+                        Conduct loss prevention audits and monitor high-risk areas to reduce shrinkage. Investigate incidents, prepare detailed reports, and recommend corrective actions. Manage access control and liaise with store management.
+                    </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-                    <!-- Skill Card 1 -->
-                    <div class="bg-slate-800/50 border border-slate-700/60 rounded-xl p-6 hover:border-brand-500/50 transition duration-300">
-                        <div class="w-12 h-12 bg-brand-500/10 text-brand-500 rounded-lg flex items-center justify-center text-2xl mb-4">
-                            <i class="fa-solid fa-video"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-white mb-2">CCTV & Monitoring</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed">Advanced video surveillance monitoring, system health checks, and real-time perimeter threat evaluation.</p>
+                <div class="relative group">
+                    <div class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-blue-600 border-2 border-white ring-4 ring-blue-50"></div>
+                    <div class="text-xs font-bold text-blue-600 tracking-wider mb-1">
+                        <i class="fa-solid fa-calendar mr-1"></i>Nov 2024 – May 2025 | <i class="fa-solid fa-location-dot mr-1"></i>Dubai, UAE
                     </div>
-
-                    <!-- Skill Card 2 -->
-                    <div class="bg-slate-800/50 border border-slate-700/60 rounded-xl p-6 hover:border-brand-500/50 transition duration-300">
-                        <div class="w-12 h-12 bg-brand-500/10 text-brand-500 rounded-lg flex items-center justify-center text-2xl mb-4">
-                            <i class="fa-solid fa-door-closed"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-white mb-2">Access & Alarms</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed">Managing electronic access control systems, gate pass checks, and handling critical alarm triggers.</p>
-                    </div>
-
-                    <!-- Skill Card 3 -->
-                    <div class="bg-slate-800/50 border border-slate-700/60 rounded-xl p-6 hover:border-brand-500/50 transition duration-300">
-                        <div class="w-12 h-12 bg-brand-500/10 text-brand-500 rounded-lg flex items-center justify-center text-2xl mb-4">
-                            <i class="fa-solid fa-triangle-exclamation"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-white mb-2">Incident Response</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed">Rapid response coordination, emergency escalations, hazmat zone monitoring, and safety compliance.</p>
-                    </div>
-
-                    <!-- Skill Card 4 -->
-                    <div class="bg-slate-800/50 border border-slate-700/60 rounded-xl p-6 hover:border-brand-500/50 transition duration-300">
-                        <div class="w-12 h-12 bg-brand-500/10 text-brand-500 rounded-lg flex items-center justify-center text-2xl mb-4">
-                            <i class="fa-solid fa-file-contract"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-white mb-2">Reporting & Audits</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed">Loss prevention audits, daily activity reports, detailed incident logs, and MS Office documentation.</p>
-                    </div>
-
+                    <h3 class="text-base font-bold text-slate-900">
+                        <i class="fa-solid fa-warehouse text-blue-600 mr-1.5"></i>Loss Prevention Officer <span class="text-xs font-normal text-slate-500">— RSA-TALKE G4S</span>
+                    </h3>
+                    <p class="text-xs sm:text-sm text-slate-700 mt-1.5 leading-relaxed">
+                        Secure warehouse operations and verify shipment documentation and gate passes. Report safety violations and support emergency response procedures. Maintain control over restricted zones.
+                    </p>
                 </div>
 
-                <!-- Skill Tags Cloud -->
-                <div class="mt-10 pt-8 border-t border-slate-800 flex flex-wrap gap-2.5 justify-center">
-                    <span class="px-3.5 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-medium">Access Control</span>
-                    <span class="px-3.5 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-medium">Alarm Monitoring</span>
-                    <span class="px-3.5 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-medium">SOC Operations</span>
-                    <span class="px-3.5 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-medium">Loss Prevention</span>
-                    <span class="px-3.5 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-medium">Asset Protection</span>
-                    <span class="px-3.5 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-medium">Incident Reporting</span>
-                    <span class="px-3.5 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-medium">MS Word & Excel</span>
-                    <span class="px-3.5 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-medium">PowerPoint</span>
-                    <span class="px-3.5 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-medium">Professional Email</span>
-                    <span class="px-3.5 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-medium">Customer Service</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Certifications & Education Section -->
-        <section id="certifications" class="py-16 border-b border-slate-800/60">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-
-                    <!-- Certifications Column -->
-                    <div>
-                        <div class="mb-8">
-                            <h2 class="text-xs uppercase tracking-widest text-brand-500 font-bold mb-2">Qualifications</h2>
-                            <p class="text-2xl font-bold text-white">Certifications & Accreditation</p>
-                        </div>
-
-                        <div class="space-y-4">
-                            <!-- SIRA Card -->
-                            <div class="bg-gradient-to-r from-slate-800/80 to-slate-800/40 border-l-4 border-brand-500 border-t border-r border-b border-slate-700/80 rounded-r-xl p-5">
-                                <div class="flex justify-between items-start">
-                                    <div>
-                                        <h3 class="text-base font-bold text-white">SIRA Security System Operator</h3>
-                                        <p class="text-xs text-brand-400 mt-1">Official UAE Security Industry Regulatory Authority</p>
-                                    </div>
-                                    <span class="text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-1 rounded">Expires Feb 15, 2028</span>
-                                </div>
-                            </div>
-
-                            <!-- Other Certs -->
-                            <div class="bg-slate-800/40 border border-slate-700/60 rounded-xl p-5">
-                                <h3 class="text-sm font-bold text-white mb-3">Professional Safety Training</h3>
-                                <div class="grid grid-cols-2 gap-3 text-xs text-slate-300">
-                                    <div class="flex items-center space-x-2">
-                                        <i class="fa-solid fa-fire-extinguisher text-brand-500"></i>
-                                        <span>Firefighting Certified</span>
-                                    </div>
-                                    <div class="flex items-center space-x-2">
-                                        <i class="fa-solid fa-kit-medical text-brand-500"></i>
-                                        <span>First Aid Certified</span>
-                                    </div>
-                                    <div class="flex items-center space-x-2">
-                                        <i class="fa-solid fa-user-shield text-brand-500"></i>
-                                        <span>Basic Security Training</span>
-                                    </div>
-                                    <div class="flex items-center space-x-2">
-                                        <i class="fa-solid fa-award text-brand-500"></i>
-                                        <span>POD Certification</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="relative group">
+                    <div class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-blue-600 border-2 border-white ring-4 ring-blue-50"></div>
+                    <div class="text-xs font-bold text-blue-600 tracking-wider mb-1">
+                        <i class="fa-solid fa-calendar mr-1"></i>Jan 2021 – Feb 2022 | <i class="fa-solid fa-location-dot mr-1"></i>Dubai, UAE
                     </div>
-
-                    <!-- Education Column -->
-                    <div>
-                        <div class="mb-8">
-                            <h2 class="text-xs uppercase tracking-widest text-brand-500 font-bold mb-2">Background</h2>
-                            <p class="text-2xl font-bold text-white">Education & Languages</p>
-                        </div>
-
-                        <div class="space-y-4">
-                            <!-- Education Card -->
-                            <div class="bg-slate-800/40 border border-slate-700/60 rounded-xl p-5">
-                                <div class="flex items-start justify-between">
-                                    <div>
-                                        <h3 class="text-base font-bold text-white">Higher Secondary Certificate (HSC)</h3>
-                                        <p class="text-xs text-slate-400 mt-1">Academic Qualification</p>
-                                    </div>
-                                    <span class="text-xs bg-slate-700 text-slate-300 px-2.5 py-1 rounded">2014 - 2015</span>
-                                </div>
-                                <p class="text-xs text-slate-400 mt-2">Completed in Bangladesh</p>
-                            </div>
-
-                            <!-- Languages Card -->
-                            <div class="bg-slate-800/40 border border-slate-700/60 rounded-xl p-5">
-                                <h3 class="text-sm font-bold text-white mb-3">Language Fluency</h3>
-                                <div class="space-y-2">
-                                    <div>
-                                        <div class="flex justify-between text-xs mb-1">
-                                            <span class="text-slate-300">English</span>
-                                            <span class="text-brand-400">Professional Working</span>
-                                        </div>
-                                        <div class="w-full h-1.5 bg-slate-700 rounded-full overflow-hidden">
-                                            <div class="w-4/5 h-full bg-brand-500"></div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="flex justify-between text-xs mb-1">
-                                            <span class="text-slate-300">Hindi / Urdu</span>
-                                            <span class="text-brand-400">Fluent</span>
-                                        </div>
-                                        <div class="w-full h-1.5 bg-slate-700 rounded-full overflow-hidden">
-                                            <div class="w-11/12 h-full bg-brand-500"></div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="flex justify-between text-xs mb-1">
-                                            <span class="text-slate-300">Bengali</span>
-                                            <span class="text-brand-400">Native</span>
-                                        </div>
-                                        <div class="w-full h-1.5 bg-slate-700 rounded-full overflow-hidden">
-                                            <div class="w-full h-full bg-brand-500"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-16 lg:py-24 bg-navy-950">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <h2 class="text-xs uppercase tracking-widest text-brand-500 font-bold mb-2">Get In Touch</h2>
-                    <p class="text-2xl sm:text-3xl font-bold text-white">Contact & Professional Details</p>
-                    <p class="text-slate-400 text-sm mt-2">Available for SOC, Security & Loss Prevention opportunities across the UAE.</p>
+                    <h3 class="text-base font-bold text-slate-900">
+                        <i class="fa-solid fa-store text-blue-600 mr-1.5"></i>Loss Prevention Officer <span class="text-xs font-normal text-slate-500">— Nikai Electronics Libra Group UAE</span>
+                    </h3>
+                    <p class="text-xs sm:text-sm text-slate-700 mt-1.5 leading-relaxed">
+                        Monitor store operations to prevent theft and policy violations. Prepare daily activity reports and incident logs; assist customer service when needed.
+                    </p>
                 </div>
 
-                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-
-                    <!-- Direct Call Card -->
-                    <div class="bg-slate-800/60 border border-slate-700 rounded-2xl p-6 text-center hover:border-brand-500 transition duration-300 flex flex-col justify-between">
-                        <div>
-                            <div class="w-12 h-12 bg-brand-500/20 text-brand-500 rounded-full flex items-center justify-center mx-auto text-xl mb-4">
-                                <i class="fa-solid fa-phone"></i>
-                            </div>
-                            <h3 class="text-lg font-bold text-white mb-1">Phone / WhatsApp</h3>
-                            <p class="text-slate-400 text-xs mb-4">Direct mobile line for inquiries</p>
-                            <p class="text-lg font-mono text-white font-semibold mb-4">+971 52 100 5209</p>
-                        </div>
-                        <div class="flex space-x-2">
-                            <a href="tel:+971521005209" class="flex-1 py-2.5 rounded-lg bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold transition">
-                                <i class="fa-solid fa-phone me-1"></i> Call Now
-                            </a>
-                            <button onclick="copyToClipboard('+971521005209')" class="px-3 py-2.5 rounded-lg bg-slate-700 hover:bg-slate-600 text-slate-200 text-xs font-semibold transition" title="Copy Phone Number">
-                                <i class="fa-regular fa-copy"></i>
-                            </button>
-                        </div>
+                <div class="relative group">
+                    <div class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-slate-400 border-2 border-white ring-4 ring-slate-50"></div>
+                    <div class="text-xs font-bold text-slate-500 tracking-wider mb-1">
+                        <i class="fa-solid fa-calendar mr-1"></i>Feb 2019 – Feb 2021 | <i class="fa-solid fa-location-dot mr-1"></i>Bangladesh
                     </div>
-
-                    <!-- Direct Email Card -->
-                    <div class="bg-slate-800/60 border border-slate-700 rounded-2xl p-6 text-center hover:border-brand-500 transition duration-300 flex flex-col justify-between">
-                        <div>
-                            <div class="w-12 h-12 bg-brand-500/20 text-brand-500 rounded-full flex items-center justify-center mx-auto text-xl mb-4">
-                                <i class="fa-solid fa-envelope"></i>
-                            </div>
-                            <h3 class="text-lg font-bold text-white mb-1">Email Address</h3>
-                            <p class="text-slate-400 text-xs mb-4">Official email communication</p>
-                            <p class="text-sm font-mono text-white font-semibold mb-4 break-all">mdabdulkadiralfahim@gmail.com</p>
-                        </div>
-                        <div class="flex space-x-2">
-                            <a href="mailto:mdabdulkadiralfahim@gmail.com" class="flex-1 py-2.5 rounded-lg bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold transition">
-                                <i class="fa-solid fa-paper-plane me-1"></i> Send Email
-                            </a>
-                            <button onclick="copyToClipboard('mdabdulkadiralfahim@gmail.com')" class="px-3 py-2.5 rounded-lg bg-slate-700 hover:bg-slate-600 text-slate-200 text-xs font-semibold transition" title="Copy Email">
-                                <i class="fa-regular fa-copy"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Toast notification for copy alert -->
-                <div id="toast" class="fixed bottom-5 right-5 bg-brand-600 text-white px-4 py-3 rounded-lg shadow-xl text-xs font-medium transition-opacity duration-300 opacity-0 pointer-events-none z-50 flex items-center space-x-2">
-                    <i class="fa-solid fa-check-circle"></i>
-                    <span id="toast-msg">Copied to clipboard!</span>
+                    <h3 class="text-base font-bold text-slate-900">
+                        <i class="fa-solid fa-shop text-slate-600 mr-1.5"></i>Retail & Store Operations (Manager / Promoter) <span class="text-xs font-normal text-slate-500">— Xiaomi, Samsung, OPPO</span>
+                    </h3>
+                    <p class="text-xs sm:text-sm text-slate-700 mt-1.5 leading-relaxed">
+                        Supervised store operations, staff performance, and customer service. Managed inventory, stock levels, and sales reporting; met sales targets.
+                    </p>
                 </div>
 
             </div>
         </section>
+
+        <!-- Core Skills & Technical Training Grid -->
+        <div class="print-grid grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <!-- Core Strengths & Skills -->
+            <section id="skills" class="bg-white border border-slate-200/80 rounded-3xl p-6 sm:p-8 shadow-xl shadow-slate-200/50 card-premium">
+                <h2 class="text-base font-bold text-blue-900 mb-4 flex items-center gap-2.5">
+                    <i class="fa-solid fa-sliders text-blue-600"></i> Core Strengths & Skills
+                </h2>
+                <div class="space-y-3 text-xs sm:text-sm text-slate-700">
+                    <div class="flex items-start gap-2.5">
+                        <i class="fa-solid fa-shield-cat text-blue-600 mt-1"></i>
+                        <div><strong>Security & Operations:</strong> Access Control, Alarm Systems, CCTV Monitoring, Incident Reporting, Asset Protection.</div>
+                    </div>
+                    <div class="flex items-start gap-2.5">
+                        <i class="fa-solid fa-laptop text-blue-600 mt-1"></i>
+                        <div><strong>Administration:</strong> MS Office (Word, Excel, PowerPoint), Professional Email Communication, Customer Service.</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education & Training -->
+            <section id="credentials" class="bg-white border border-slate-200/80 rounded-3xl p-6 sm:p-8 shadow-xl shadow-slate-200/50 card-premium">
+                <h2 class="text-base font-bold text-blue-900 mb-4 flex items-center gap-2.5">
+                    <i class="fa-solid fa-graduation-cap text-blue-600"></i> Education & Credentials
+                </h2>
+                <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700">
+                    <li class="flex items-center gap-2.5"><i class="fa-solid fa-school text-blue-600"></i><strong>HSC:</strong> 2014–2015, Bangladesh</li>
+                    <li class="flex items-center gap-2.5"><i class="fa-solid fa-certificate text-blue-600"></i><strong>Certifications:</strong> Basic Security Training, Firefighting, First Aid, POD</li>
+                    <li class="flex items-center gap-2.5"><i class="fa-solid fa-id-badge text-blue-600"></i><strong>SIRA Operator:</strong> Valid until 15-02-2028</li>
+                    <li class="flex items-center gap-2.5"><i class="fa-solid fa-car text-blue-600"></i><strong>UAE Driving License:</strong> Automatic (No. 4852116, Exp: 30/12/2026)</li>
+                    <li class="flex items-center gap-2.5"><i class="fa-solid fa-language text-blue-600"></i><strong>Languages:</strong> English, Hindi/Urdu, Bengali</li>
+                </ul>
+            </section>
+
+        </div>
+
+        <!-- Personal Info & Document Attachment Section -->
+        <section id="personal-info" class="bg-white border border-slate-200/80 rounded-3xl p-6 sm:p-8 shadow-xl shadow-slate-200/50 card-premium">
+            <h2 class="text-base font-bold text-blue-900 mb-4 flex items-center gap-2.5">
+                <i class="fa-solid fa-address-card text-blue-600"></i> Personal Information
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-700">
+                <div class="space-y-2">
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-flag text-blue-600"></i><strong>Nationality:</strong> Bangladeshi</div>
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-ring text-blue-600"></i><strong>Civil Status:</strong> Married</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-passport text-blue-600"></i><strong>Visa Status:</strong> Employment Visa</div>
+                </div>
+            </div>
+            
+            <div class="mt-6 pt-4 border-t border-slate-100 text-center text-xs sm:text-sm text-slate-600 italic">
+                <i class="fa-solid fa-quote-left text-blue-500 mr-1"></i>"Declaring that the above details are true and correct." <i class="fa-solid fa-quote-right text-blue-500 ml-1"></i> — <strong class="not-italic">(ABDUL KADIR AL FAHIM)</strong>
+            </div>
+        </section>
+
+        <!-- Contact Footer -->
+        <footer id="contact" class="bg-white border border-slate-200/80 rounded-3xl p-6 sm:p-8 text-center shadow-xl shadow-slate-200/50 card-premium no-print">
+            <h2 class="text-base font-bold text-slate-900 mb-1.5 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-paper-plane text-blue-600"></i> Let's Connect
+            </h2>
+            <p class="text-slate-600 text-xs sm:text-sm mb-6">Available for professional opportunities in security operations and loss prevention.</p>
+            <div class="flex flex-wrap justify-center gap-3 text-xs sm:text-sm font-bold">
+                <a href="mailto:mdabdulkadiralfahim@gmail.com" class="bg-slate-50 border border-slate-200 text-slate-800 px-4 py-2.5 rounded-xl hover:bg-blue-50 hover:border-blue-300 hover:text-blue-700 transition duration-200 flex items-center gap-2 shadow-sm">
+                    <i class="fa-solid fa-envelope text-blue-600"></i> Email Me
+                </a>
+                <a href="tel:+971521005209" class="bg-slate-50 border border-slate-200 text-slate-800 px-4 py-2.5 rounded-xl hover:bg-blue-50 hover:border-blue-300 hover:text-blue-700 transition duration-200 flex items-center gap-2 shadow-sm">
+                    <i class="fa-solid fa-mobile-screen-button text-blue-600"></i> Call Phone
+                </a>
+                <a href="https://linkedin.com/in/abdulkadiralfahim" target="_blank" class="bg-slate-50 border border-slate-200 text-slate-800 px-4 py-2.5 rounded-xl hover:bg-blue-50 hover:border-blue-300 hover:text-blue-700 transition duration-200 flex items-center gap-1.5 shadow-sm">
+                    <i class="fa-brands fa-linkedin text-blue-600"></i> LinkedIn Profile
+                </a>
+            </div>
+        </footer>
+
     </main>
 
-    <!-- Footer -->
-    <footer class="border-t border-slate-800 bg-navy-950 py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-slate-500 space-y-2">
-            <p>©️ 2026 Abdul Kadir Al Fahim. All rights reserved.</p>
-            <p>Security & Loss Prevention Professional | Dubai, UAE</p>
-        </div>
-    </footer>
-
-    <script>
-        // Toggle Mobile Menu
-        const mobileBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-
-        if (mobileBtn && mobileMenu) {
-            mobileBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
-            });
-        }
-
-        // Copy Helper function using document.execCommand for iFrame compatibility
-        function copyToClipboard(text) {
-            const textarea = document.createElement('textarea');
-            textarea.value = text;
-            textarea.style.position = 'fixed';
-            textarea.style.opacity = '0';
-            document.body.appendChild(textarea);
-            textarea.select();
-            
-            try {
-                document.execCommand('copy');
-                showToast(`Copied "${text}" to clipboard!`);
-            } catch (err) {
-                console.error('Failed to copy', err);
-            }
-            
-            document.body.removeChild(textarea);
-        }
-
-        // Custom Toast Notification
-        function showToast(message) {
-            const toast = document.getElementById('toast');
-            const toastMsg = document.getElementById('toast-msg');
-            if (toast && toastMsg) {
-                toastMsg.textContent = message;
-                toast.classList.remove('opacity-0', 'pointer-events-none');
-                toast.classList.add('opacity-100');
-                
-                setTimeout(() => {
-                    toast.classList.remove('opacity-100');
-                    toast.classList.add('opacity-0', 'pointer-events-none');
-                }, 3000);
-            }
-        }
-    </script>
 </body>
 </html>
-```
